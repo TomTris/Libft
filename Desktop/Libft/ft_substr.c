@@ -6,13 +6,13 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 16:50:13 by qdo               #+#    #+#             */
-/*   Updated: 2024/03/11 16:37:00 by qdo              ###   ########.fr       */
+/*   Updated: 2024/03/12 16:04:45 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_sstr_re(char *s, size_t len)
+static char	*ft_sstr_re(char *s, size_t len)
 {
 	char	*sstr;
 

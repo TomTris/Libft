@@ -6,13 +6,13 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 15:52:17 by qdo               #+#    #+#             */
-/*   Updated: 2024/03/11 16:37:51 by qdo              ###   ########.fr       */
+/*   Updated: 2024/03/12 15:53:36 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_write(int n, int fd)
+static void	ft_write(int n, int fd)
 {
 	char	a;
 

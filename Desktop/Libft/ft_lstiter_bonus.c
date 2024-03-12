@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 21:37:56 by qdo               #+#    #+#             */
-/*   Updated: 2024/03/12 15:54:10 by qdo              ###   ########.fr       */
+/*   Created: 2024/03/12 12:22:33 by qdo               #+#    #+#             */
+/*   Updated: 2024/03/12 18:39:28 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if ((char)c == '\0')
+	t_list	*ptr;
+
+	if (lst == 0)
+		return ;
+	while (lst->next != 0)
 	{
-		while (*s != 0)
-			s++;
-		return ((char *)s);
+		ptr = lst;
+		lst = lst->next;
+		(*f)(ptr->content);
 	}
-	while (*s != '\0')
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
-	}
-	return (NULL);
+	(*f)(lst->content);
+	return ;
 }
-
-// int main(void)
-// {
-// 	char    *a;
-
-// 	a = malloc(30);
-// 	strcpy(a, "1234567890");
-// 	printf("%s\n", a);
-// 	printf("%s\n", strchr(a, 25));
-// 	return (0);
-// }

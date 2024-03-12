@@ -1,41 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 21:37:56 by qdo               #+#    #+#             */
-/*   Updated: 2024/03/12 15:54:10 by qdo              ###   ########.fr       */
+/*   Created: 2024/03/12 11:52:58 by qdo               #+#    #+#             */
+/*   Updated: 2024/03/12 13:00:04 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_lstsize(t_list *lst)
 {
-	if ((char)c == '\0')
+	int	cnt;
+
+	if (lst == 0)
+		return (0);
+	cnt = 1;
+	while (lst->next != NULL)
 	{
-		while (*s != 0)
-			s++;
-		return ((char *)s);
+		lst = lst->next;
+		cnt++;
 	}
-	while (*s != '\0')
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
-	}
-	return (NULL);
+	return (cnt);
 }
-
-// int main(void)
-// {
-// 	char    *a;
-
-// 	a = malloc(30);
-// 	strcpy(a, "1234567890");
-// 	printf("%s\n", a);
-// 	printf("%s\n", strchr(a, 25));
-// 	return (0);
-// }

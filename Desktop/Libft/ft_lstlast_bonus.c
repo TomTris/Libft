@@ -1,41 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 21:37:56 by qdo               #+#    #+#             */
-/*   Updated: 2024/03/12 15:54:10 by qdo              ###   ########.fr       */
+/*   Created: 2024/03/12 11:53:47 by qdo               #+#    #+#             */
+/*   Updated: 2024/03/12 12:57:59 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if ((char)c == '\0')
-	{
-		while (*s != 0)
-			s++;
-		return ((char *)s);
-	}
-	while (*s != '\0')
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
-	}
-	return (NULL);
+	if (lst == NULL)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }
-
-// int main(void)
-// {
-// 	char    *a;
-
-// 	a = malloc(30);
-// 	strcpy(a, "1234567890");
-// 	printf("%s\n", a);
-// 	printf("%s\n", strchr(a, 25));
-// 	return (0);
-// }

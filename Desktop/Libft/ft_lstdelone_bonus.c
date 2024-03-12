@@ -1,41 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 21:37:56 by qdo               #+#    #+#             */
-/*   Updated: 2024/03/12 15:54:10 by qdo              ###   ########.fr       */
+/*   Created: 2024/03/12 11:54:56 by qdo               #+#    #+#             */
+/*   Updated: 2024/03/12 16:19:00 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if ((char)c == '\0')
-	{
-		while (*s != 0)
-			s++;
-		return ((char *)s);
-	}
-	while (*s != '\0')
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
-	}
-	return (NULL);
+	if (lst == 0)
+		return ;
+	(*del)(lst->content);
+	free(lst);
 }
-
-// int main(void)
-// {
-// 	char    *a;
-
-// 	a = malloc(30);
-// 	strcpy(a, "1234567890");
-// 	printf("%s\n", a);
-// 	printf("%s\n", strchr(a, 25));
-// 	return (0);
-// }

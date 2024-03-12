@@ -6,13 +6,13 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 14:59:48 by qdo               #+#    #+#             */
-/*   Updated: 2024/03/11 14:24:32 by qdo              ###   ########.fr       */
+/*   Updated: 2024/03/12 15:54:00 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_ret_len(char *dup, size_t dup_len)
+static size_t	ft_ret_len(char *dup, size_t dup_len)
 {
 	int	i;
 	int	j;
@@ -36,7 +36,7 @@ size_t	ft_ret_len(char *dup, size_t dup_len)
 	return (cnt);
 }
 
-void	ft_new_dup(char *dup, size_t dup_full_len, char c)
+static void	ft_new_dup(char *dup, size_t dup_full_len, char c)
 {
 	while (dup_full_len > 0)
 	{

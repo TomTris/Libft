@@ -6,13 +6,13 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 08:51:35 by qdo               #+#    #+#             */
-/*   Updated: 2024/03/10 15:21:13 by qdo              ###   ########.fr       */
+/*   Updated: 2024/03/12 15:54:47 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp1(char *a, char *b, size_t len)
+static int	ft_strncmp1(char *a, char *b, size_t len)
 {
 	while (*a != 0 && *b != 0 && len > 0)
 	{

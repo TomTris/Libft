@@ -6,13 +6,13 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 13:52:09 by qdo               #+#    #+#             */
-/*   Updated: 2024/03/11 14:38:29 by qdo              ###   ########.fr       */
+/*   Updated: 2024/03/12 15:52:20 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_2147483648(void)
+static char	*ft_2147483648(void)
 {
 	char	*ret;
 
@@ -26,7 +26,7 @@ char	*ft_2147483648(void)
 	return (ret);
 }
 
-size_t	ft_cnt(int n)
+static size_t	ft_cnt(int n)
 {
 	size_t	cnt;
 
@@ -47,7 +47,7 @@ size_t	ft_cnt(int n)
 	return (cnt);
 }
 
-void	ft_fill(char *ret, int n, int cnt)
+static void	ft_fill(char *ret, int n, int cnt)
 {
 	if (n < 0)
 		n *= -1;

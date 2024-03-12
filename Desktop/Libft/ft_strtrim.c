@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 11:38:55 by qdo               #+#    #+#             */
-/*   Updated: 2024/03/10 15:22:17 by qdo              ###   ########.fr       */
+/*   Updated: 2024/03/12 15:55:12 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_check(char *s1, char *s2, size_t set_cnt)
 	return (i);
 }
 
-int	ft_check2(char *s1, char *set, size_t set_cnt)
+static int	ft_check2(char *s1, char *set, size_t set_cnt)
 {
 	while (*s1)
 	{
@@ -40,7 +40,7 @@ int	ft_check2(char *s1, char *set, size_t set_cnt)
 	return (0);
 }
 
-size_t	ft_strtrim3(char *s1, char *set, size_t cnt, size_t set_cnt)
+static size_t	ft_strtrim3(char *s1, char *set, size_t cnt, size_t set_cnt)
 {
 	size_t	i;
 
@@ -57,7 +57,7 @@ size_t	ft_strtrim3(char *s1, char *set, size_t cnt, size_t set_cnt)
 	return (i);
 }
 
-char	*ft_strtrim2(char *s1, char *set, size_t cnt, size_t set_cnt)
+static char	*ft_strtrim2(char *s1, char *set, size_t cnt, size_t set_cnt)
 {
 	char	*ret;
 	size_t	i;
